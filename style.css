@@ -1,0 +1,397 @@
+* {
+  font-family: "Sofia Sans", sans-serif;
+  font-optical-sizing: auto;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+/* utlity bar of top */
+#utility-bar {
+  background-color: #f2f6f7;
+  display: flex;
+  width: 100%;
+  height: 5vh;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#utility-bar-part1 {
+  width: 10%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#utility-bar-part1 i {
+  font-size: 30px;
+  color: #292929;
+}
+
+#utility-bar-part2 {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+}
+
+#utility-bar-part2 a,
+h5 {
+  text-decoration: none;
+  color: #292929;
+}
+
+#utility-bar-part3 {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+}
+
+#utility-bar-part3 a {
+  text-decoration: none;
+  color: #292929;
+}
+
+/* Page 1 */
+#page1 {
+  width: 100%;
+  height: fit-content;
+}
+
+/* Nav section */
+#nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 8vh;
+}
+
+#navpart1 {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#navpart1 a {
+  text-decoration: none;
+}
+
+#navpart1 h1 {
+  color: #000;
+  font-size: 5vh;
+  transition: all 0.3s ease;
+}
+
+#navpart1:hover {
+  h1 {
+    transform: scale(1.05);
+  }
+}
+
+#navpart2 {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 30%;
+  justify-content: center;
+  padding: 20px;
+}
+
+.nav-menu li a {
+  position: relative;
+  text-decoration: none;
+  color: #4b4b4b;
+  font-size: 2.2vh;
+  font-weight: 500;
+  padding-bottom: 5px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.nav-menu li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  border-bottom: 2px solid #000000;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+  translate: -50%;
+}
+
+.nav-menu li a:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-menu li a:hover {
+  color: #000000;
+  transform: scale(1.3);
+}
+
+#navpart3 {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#navpart3 button {
+  cursor: pointer;
+  padding: 12px 25px;
+  border: none;
+  background-color: #415bb9;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+#navpart3 button:hover {
+  background-color: #415bb9c9;
+  transform: scale(1.1);
+  font-size: 1.5vh;
+}
+
+/* Content section of page 1  */
+#page1-content {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+#page1-content h1 {
+  font-size: 7.5vh;
+  text-align: center;
+  margin-top: 5vh;
+}
+
+#aeroplaneimage {
+  height: 50vh;
+  width: 80%;
+  margin-top: 10vh;
+  border-radius: 250px;
+  background: url(https://images.unsplash.com/photo-1601345459799-245d61f56121?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDl8fHNreXxlbnwwfDB8MHx8fDA%3D);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+#aeroplaneimage img {
+  position: relative;
+  height: fit-content;
+  width: 100%;
+  scale: 1.2;
+  bottom: 30%;
+}
+
+/* Booking box */
+#bookingbox {
+  border: 2px solid black;
+  padding: 20px 40px;
+  width: 70%;
+  height: 21vh;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+.tabs {
+  border: 1px solid #0e0e0e;
+  padding: 2px 2px;
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+.tab {
+  background-color: transparent;
+  border: none;
+  padding: 10px 40px;
+  border-radius: 20px;
+}
+
+.tab-active {
+  background-color: #415bb9;
+  border: none;
+  padding: 10px 40px;
+  border-radius: 18px;
+}
+
+.fields {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 24px;
+  flex-wrap: wrap;
+  width: 50%;
+  margin: 30px auto;
+}
+
+.field i {
+  font-size: 1.6vh;
+}
+
+.field label {
+  font-size: 1.5vh;
+  color: #000000;
+}
+
+.field .value {
+  font-size: 1vh;
+  font-weight: 500;
+  color: #333;
+}
+
+.search i {
+  background: #2c5eff;
+  color: white;
+  padding: 12px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* For responsiveness */
+@media (max-width: 600px) {
+  /* utlity bar of top */
+  #utility-bar-part1 i {
+    font-size: 25px;
+  }
+  #utility-bar-part2 a,
+  h5 {
+    font-size: 10px;
+  }
+  #utility-bar-part3 h4 {
+    font-size: 15px;
+  }
+  #page1 {
+    width: 100%;
+    height: 100vh;
+  }
+
+  /* Nav section */
+  #nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5vh;
+  }
+  #navpart1 h1 {
+    font-size: 3vh;
+  }
+  .nav-menu li a {
+    display: none;
+  }
+  #navpart3 button {
+    padding: 8px 12px;
+  }
+  /* Content section of page 1  */
+  #page1-content h1 {
+    font-size: 6vh;
+    margin-bottom: 15%;
+  }
+  #aeroplaneimage {
+    height: 200px;
+    border-radius: 150px;
+    margin-top: 8vh;
+  }
+
+  #aeroplaneimage img {
+    width: 100%;
+    scale: 1.25;
+    bottom: 20%;
+  }
+
+  /* Booking box */
+  #bookingbox {
+    border: 2px solid black;
+    padding: 10px 20px;
+    width: 90%;
+    height: fit-content;
+  }
+
+  .tabs {
+    border: 1px solid #0e0e0e;
+    padding: 2px 2px;
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 20px;
+  }
+
+  .tab {
+    background-color: transparent;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 20px;
+  }
+
+  .tab-active {
+    background-color: #415bb9;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 18px;
+  }
+
+  .fields {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 24px;
+    flex-wrap: wrap;
+    width: 50%;
+    margin: 30px auto;
+    /* background-color: green; */
+  }
+
+  .field i {
+    font-size: 1.6vh;
+  }
+
+  .field label {
+    font-size: 1.5vh;
+    color: #000000;
+  }
+
+  .field .value {
+    font-size: 1vh;
+    font-weight: 500;
+    color: #333;
+  }
+
+  .search i {
+    background: #2c5eff;
+    color: white;
+    padding: 12px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+  }
+}
